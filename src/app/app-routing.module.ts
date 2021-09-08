@@ -6,7 +6,10 @@ const routes: Routes = [
   import('./user/user.module').then((m: { UserModule: any; }) => m.UserModule)},
   {
     path:'',redirectTo:'/user',pathMatch:'full'
-  }
+  },
+  {path: 'admin', loadChildren:()=>
+  import('./admin/admin.module').then((m: { AdminModule: any; }) => m.AdminModule)},
+  
 ];
 
 @NgModule({
