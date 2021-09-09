@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './admingurds/auth.guard';
 import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { MedmanageComponent } from './medmanage/medmanage.component';
@@ -8,10 +9,10 @@ import { UsermanageComponent } from './usermanage/usermanage.component';
 
 const routes: Routes = [
   {path: '',component:LoginadminComponent},
-  {path: 'homeadmin',component:HomeadminComponent},
-{path: 'medmanage',component:MedmanageComponent},
-{path: 'oxygenmanage',component:OxygenmanageComponent},
-{path: 'usermanage',component:UsermanageComponent}
+  {path: 'homeadmin',canActivate:[AuthGuard],component:HomeadminComponent},
+{path: 'medmanage',canActivate:[AuthGuard],component:MedmanageComponent},
+{path: 'oxygenmanage',canActivate:[AuthGuard],component:OxygenmanageComponent},
+{path: 'usermanage',canActivate:[AuthGuard],component:UsermanageComponent}
 ];
 
 @NgModule({

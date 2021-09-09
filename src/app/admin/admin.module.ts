@@ -8,6 +8,7 @@ import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { OxygenmanageComponent } from './oxygenmanage/oxygenmanage.component';
 import { MedmanageComponent } from './medmanage/medmanage.component';
 import { UsermanageComponent } from './usermanage/usermanage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { UsermanageComponent } from './usermanage/usermanage.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
