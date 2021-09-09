@@ -1,0 +1,7 @@
+input[type=text], input[type=password] {
+    padding: 10px 50px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid rgb(139, 131, 131);
+    box-sizing: border-box;
+  }
