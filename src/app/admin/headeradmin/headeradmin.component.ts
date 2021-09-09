@@ -10,8 +10,7 @@ export class HeaderadminComponent implements OnInit {
 
   constructor(private auth:AuthService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   logout(): void {
     this.auth.logout();
   }
