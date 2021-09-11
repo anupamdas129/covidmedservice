@@ -1,11 +1,11 @@
 
-    <img src="../../../assets/images/loginimg.jpg" class="img-responsive" alt="Cinque Terre" width="100%" height="60%" back> 
-    <h1 style="text-align:center;margin-top: -40%;color:yellow">Login page for admin</h1>
+    <img src="../../../assets/images/loginimg.jpg" class="img-responsive" alt="Cinque Terre" style="margin-left: 350px;margin-top: 20px" width="50%" height="20%"back> 
+    <h1 style="text-align:center;margin-top: -30%;color:black">Login page for admin</h1>
     
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-left: 40%;margin-top: 2%;color:yellow">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-left: 40%;margin-top: 2%;color:black">
     <label for="uname"><h4>Username:</h4></label><br>
     <input formControlName="uname" type="text" id="uname" name="uname"><br><br>
     <label for="password"><h4>Password:</h4></label><br>
     <input formControlName="password" type="password" id="password" name="password"><br><br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-warning">Submit</button>
   </form>
