@@ -7,6 +7,7 @@ import { HeaderUserComponent } from './header-user/header-user.component';
 import { FooterUserComponent } from './footer-user/footer-user.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { FormsModule } from '@angular/forms';
+import { LoginuserComponent } from './loginuser/loginuser.component';
 
 
 
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     HeaderUserComponent,
     FooterUserComponent,
     AboutpageComponent,
+    LoginuserComponent,
 
   ],
   imports: [

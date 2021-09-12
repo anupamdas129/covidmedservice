@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginuserComponent } from './loginuser/loginuser.component';
 
 const routes: Routes = [
   {path: '',component:HomepageComponent},
   {path: 'aboutpage',component:AboutpageComponent},
+  {path: 'login',component:LoginuserComponent},
   {path: 'doctorportal', loadChildren:()=>
   import('./doctorprotal/doctorprotal.module').then((m: { DoctorprotalModule: any; }) => m.DoctorprotalModule)},
   {path: 'oxygen', loadChildren:()=>
