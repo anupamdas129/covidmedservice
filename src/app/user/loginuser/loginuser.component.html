@@ -1,12 +1,18 @@
 <body>
     <div class="login-form">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" action="/examples/actions/confirmation.php" method="post">
-            <h2 class="text-center">Log in</h2>       
+            <h2 class="text-center">User Log in</h2>       
             <div class="form-group">
                 <input formControlName="email" type="text" class="form-control" placeholder="Email" required="required">
+                <small class = "text-danger" *ngIf="!this.loginForm.get('email')?.valid && this.loginForm.get('email')?.touched">
+                    plsease enter a valid email
+                </small>
             </div><br>
             <div class="form-group">
                 <input formControlName="password" type="password" class="form-control" placeholder="Password" required="required">
+                <small class = "text-danger" *ngIf="!this.loginForm.get('password')?.valid && this.loginForm.get('password')?.touched">
+                    plsease enter password
+                </small>
             </div><br>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Log in</button>
@@ -15,6 +21,6 @@
                 <a href="#" class="pull-right">Forgot Password?</a>
             </div>        
         </form>
-        <p class="text-center"><a href="#">Create an Account</a></p>
+        <p class="text-center"><a routerLink="/user/register">Create an Account</a></p>
     </div>
     </body>

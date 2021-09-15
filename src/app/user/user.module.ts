@@ -8,6 +8,7 @@ import { FooterUserComponent } from './footer-user/footer-user.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginuserComponent } from './loginuser/loginuser.component';
+import { RegistrationuserComponent } from './registrationuser/registrationuser.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LoginuserComponent } from './loginuser/loginuser.component';
     FooterUserComponent,
     AboutpageComponent,
     LoginuserComponent,
+    RegistrationuserComponent,
 
   ],
   imports: [

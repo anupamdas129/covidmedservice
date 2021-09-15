@@ -36,7 +36,6 @@ export class AuthService {
   login({ email, password }: any): Observable<any> {
     this.getUser();
     for(var list of this.Users){
-    console.log(this.Users)
     if ( email == list.email&& password == list.password) {
       this.setToken(list._id);
       return of({ uname: list.name, emai:list.email});

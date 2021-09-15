@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { AuthService } from '../service/authservice/auth.service';
@@ -15,8 +15,8 @@ export class LoginuserComponent implements OnInit {
   Users: User[] = [];
 
   loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
+    'email': new FormControl(null,[Validators.required,Validators.email]),
+    'password': new FormControl(null,Validators.required),
   })
   constructor(private auth: AuthService,private router: Router,private userService:UserService) {}
 
@@ -37,6 +37,7 @@ export class LoginuserComponent implements OnInit {
   //   })
   // }
   onSubmit(): void{
+
     if(this.loginForm.valid){
       this.auth.login(this.loginForm.value).subscribe(
         (result) => {

@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginuserComponent } from './loginuser/loginuser.component';
+import { RegistrationuserComponent } from './registrationuser/registrationuser.component';
 import { AuthGuard } from './usergurd/authgurd/auth.guard';
 
 const routes: Routes = [
   {path: '',component:HomepageComponent},
   {path: 'aboutpage',component:AboutpageComponent},
   {path: 'login',component:LoginuserComponent},
+  {path: 'register',component:RegistrationuserComponent},
   {path: 'doctorportal',canActivate:[AuthGuard], loadChildren:()=>
   import('./doctorprotal/doctorprotal.module').then((m: { DoctorprotalModule: any; }) => m.DoctorprotalModule)},
   {path: 'oxygen',canActivate:[AuthGuard], loadChildren:()=>

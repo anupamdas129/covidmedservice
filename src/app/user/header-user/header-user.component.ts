@@ -7,7 +7,7 @@ import { AuthService } from '../service/authservice/auth.service';
   styleUrls: ['./header-user.component.css']
 })
 export class HeaderUserComponent implements OnInit {
-
+  
   constructor(private auth:AuthService) { }
   show:boolean = !this.auth.isLoggedIn();
   ngOnInit(): void {
