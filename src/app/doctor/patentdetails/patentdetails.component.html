@@ -1,0 +1,64 @@
+<app-headerdoctor></app-headerdoctor>
+<div class="container">
+    <div class="inner">
+        <h2>Name: {{this.patent.name}}</h2>
+        <div class="body">
+        <p>Phone : {{this.patent.phno}}, Email : {{this.patent.email}}</p>
+        <p>Is Covid Positive : {{this.patent.covidAuth}}<br> Is patent has fever : {{this.patent.fever}}</p>
+        <p>Patent age: {{this.patent.age}}</p>
+        <p>Temperature of patent : {{this.patent.temperature}}</p>
+        <p>Details Problem:</p>
+        <div style="border: 1px solid black;">
+            <p style="margin: 35px;">
+            {{this.patent.symptomdetails}}
+            </p>
+        </div>
+
+        <br>
+        <p>Address: {{this.patent.address}}</p>
+
+        <p>Date : {{this.patent.date.toString().slice(0,10)}} </p>
+
+        <span class="badge" [ngClass]="{
+            'alert-success':this.patent.chackStst==true,
+            'alert-danger':this.patent.chackStst==false}"> treatment status </span>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="inner">
+        <form [formGroup]="sendLink" (ngSubmit)="onSubmitLink()">
+        <div class="mb-3" style="font-size: 22px;">
+            <label for="givelink" class="form-label" style="font-weight:bold">Give Google Meet Link Here:</label>
+            <textarea formControlName="videoLink" type="text" class="form-control" id="exampleFormControlInput1"></textarea>
+          </div>
+          <div class="mb-3" style="font-size: 22px;">
+            <label for="givelink" class="form-label" style="font-weight:bold">write date and time here:</label>
+            <input formControlName="date" type="text" autocomplete="off" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="btn-group" role="group" aria-label="Basic example" style="margin-left:550px;margin-top:-100px">
+            <button type="submit" class="btn btn-success">Send Link</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="inner">
+        <form [formGroup]="sendPrescription" (ngSubmit)="onSubmitPrescription()" >
+            <div class="mb-3" style="font-size: 22px;">
+                <label for="givelink" class="form-label" style="font-weight:bold">Enter your name Doctor:</label>
+                <input formControlName="dname" autocomplete="off"  type="text" class="form-control" id="exampleFormControlInput1">
+              </div>
+        <div class="mb-3" style="font-size: 22px;">
+            <label for="givelink" class="form-label" style="font-weight:bold">write prescription here:</label>
+            <textarea formControlName="medicine" type="text" class="form-control" id="exampleFormControlInput1" style="width:1000px;height: 500px"></textarea>
+          </div>
+          <div class="btn-group" role="group" aria-label="Basic example" style="">
+            <button type="submit" class="btn btn-success">Send Prescription</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

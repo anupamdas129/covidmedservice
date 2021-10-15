@@ -39,7 +39,7 @@ export class RegistrationuserComponent implements OnInit {
     this.notAllowdEmail.push(list.email)
     }
   }
-  emailValidate(control:FormControl){
+  emailValidate(control:FormControl){//['','','',]
     this.getEmaulList();
     if(this.notAllowdEmail.lastIndexOf(control.value)!==-1){
       return{'emailIsNotAllowed':true};
@@ -49,7 +49,6 @@ export class RegistrationuserComponent implements OnInit {
 
   onSubmit() {
     this.getEmaulList();
-    console.log(this.regForm)
     if(this.regForm.valid){
       this.userService.addUser(this.regForm.value).subscribe(
         (res) => {

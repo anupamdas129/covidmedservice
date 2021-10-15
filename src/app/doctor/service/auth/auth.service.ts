@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    return this.getToken() !== null;
+    return this.getToken() == 'abcdefghijklmnopqrstuvwxyz1';
   }
 
   logout() {
@@ -27,7 +27,7 @@ export class AuthService {
 
   login({ uname, password }: any): Observable<any> {
     if ( uname === 'anupam' && password === '123') {
-      this.setToken('abcdefghijklmnopqrstuvwxyz');
+      this.setToken('abcdefghijklmnopqrstuvwxyz1');
       return of({ uname: 'anupam', email: 'pom@gmail.com' });
     }
     return throwError(new Error('Failed to login'));

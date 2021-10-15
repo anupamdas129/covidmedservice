@@ -1,0 +1,15 @@
+
+
+<div class="con wrapper">
+    <div class="inner">
+        <p style="font-weight: 50px;font-size: 25px;margin:20px 0px 20px 150px">Here is link and time of meeting for discussing with doctor</p>
+        <div class="card border border-5" style="margin-left: 150px;margin-right: 150px;margin-top:20px;margin-bottom: 20px;width:700px;border-radius: 10px;" *ngFor="let item of this.revlinks">
+            <div class="card-body " style="background:#fff7e6" >
+              <p>{{item.name}} you have meeting with doctor on {{item.date}}</p>
+              <p>Here is your link:</p>
+              <p style="font-weight:bold"><a target="_blank" href="{{item.videoLink}}">{{item.videoLink}}</a></p>
+              <P>Please attend your meeting in time.</P>
+            </div>
+          </div>
+    </div>
+</div>

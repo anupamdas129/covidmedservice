@@ -15,5 +15,11 @@ export class UserService {
   getUserlist(){
     return this.http.get(this.url);
   }
+  getUseById(id:any){
+    return this.http.get(`${this.url}/${id}`,);
+  }
+  updateUser(user: User){
+    return this.http.put(`${this.url}/${user._id}`,user)
+  }
 
 }

@@ -1,0 +1,29 @@
+<app-headerdoctor></app-headerdoctor>
+<div class="container1">
+  <h1>Patent List:</h1>
+  <br>
+    <div class="row" >
+        <div class="col-sm-4" *ngFor="let item of this.patentlist">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Name: {{item.name}} And Email: {{item.email}}</h5>
+              <p class="card-text">Fever : <span class="badge" [ngClass]="{
+                'alert-danger':item.fever=='Yes',
+                'alert-success':item.fever=='No'}"> {{item.fever}}</span>
+                    ,  Covid Posivite: <span class="badge" [ngClass]="{
+                    'alert-danger':item.covidAuth=='Yes',
+                    'alert-success':item.covidAuth=='No'}"> {{item.covidAuth}}</span></p>
+                    <p class="card-text">Age: {{item.age}} ,  Date : {{item.date.toString().slice(0,10)}}</p>
+              <span class="badge" [ngClass]="{
+                  'alert-success':item.chackStst==true,
+                  'alert-danger':item.chackStst==false}"> treatment status </span>
+              <br><br>
+              <a [routerLink]="['/doctor/patentdetails',item._id]" class="btn btn-primary">Go For Detsils</a>
+              <a class="btn btn-primary" style="margin-left:120px" (click)="onDelete(item._id)">Delete</a>
+            </div>
+          </div>
+          <br>
+        </div>
+        
+      
+</div>

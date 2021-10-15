@@ -1,0 +1,14 @@
+.container{
+    border-style: outset;;
+    background:yellow;
+    padding:100px;
+    padding-bottom:150px;
+    padding-right:150px;
+    height:700px;
+    overflow-y:scroll;
+    margin-left:100px;
+}
+.inner{
+
+    margin:35px;
+}

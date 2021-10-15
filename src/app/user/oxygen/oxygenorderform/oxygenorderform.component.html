@@ -1,0 +1,69 @@
+
+<div style="border-style: outset; border-width:15px;margin-bottom: 10%; border-color: #99c2ff; background:#b3e6ff;">
+<form [formGroup]="oxyBookForm"  (ngSubmit)="onSubmit()" style="margin-top:10%;margin-bottom:10%;margin-right:10%;margin-left:10%;" >
+<h2 style="text-align:center">Oxygen Service</h2>
+<br>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>Enter address:</b></label>
+    <textarea  formControlName="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <small class = "text-danger" *ngIf="!this.oxyBookForm.get('address')?.valid && this.oxyBookForm.get('address')?.touched">
+    * plsease enter your address
+  </small>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><b>Enter Pin:</b></label>
+    <input formControlName='pin' type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <small class = "text-danger" *ngIf="!this.oxyBookForm.get('pin')?.valid && this.oxyBookForm.get('pin')?.touched">
+    <span *ngIf="this.oxyBookForm.get('pin')?.errors?.required"> enter a PIN</span>
+    <span *ngIf="this.oxyBookForm.get('pin')?.errors?.PinIsNotAllowed">service is not allowed in this area</span>
+  </small>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><b>Enter Andher No:</b></label>
+    <input formControlName='andharNo' type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <small class = "text-danger" *ngIf="!this.oxyBookForm.get('andharNo')?.valid && this.oxyBookForm.get('andharNo')?.touched">
+    * plsease enter a andhar no
+  </small>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>Cause For ordering Oxygen:</b></label>
+    <textarea formControlName='causeforOxy' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <small class = "text-danger" *ngIf="!this.oxyBookForm.get('causeforOxy')?.valid && this.oxyBookForm.get('causeforOxy')?.touched">
+    * plsease enter ypur reason
+  </small>
+  <div class="mb-3">
+<label for="exampleFormControlTextarea1" class="form-label"><b>Covid Positive:</b></label>
+  <div class="form-check radio radio1">
+    <input formControlName='CovidAuth' id="Yes" value="true" name="CovidAuth" class="form-check-input checkbox-radio" type="radio">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault1">
+     <b> Yes</b>
+    </label>
+  </div>
+  <div class="form-check radio radio2">
+    <input formControlName='CovidAuth' id="No" value="false" name="CovidAuth" class="form-check-input checkbox-radio" type="radio">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault2">
+     <b> No </b>
+    </label>
+  </div>
+  <small class = "text-danger" *ngIf="!this.oxyBookForm.get('CovidAuth')?.valid && this.oxyBookForm.get('CovidAuth')?.touched">
+    * plsease enter ypur reason
+  </small>
+  <br><br><br>
+  <div class="mb-3">
+  <div class="mb-3" style="text-align:center">
+    <button type="submit" class="btn btn-primary" style="width:20%;padding: 15px;">Submit</button>
+  </div>
+</div>
+</div>
+</form>
+<form style="margin-top:-160px;margin-bottom: 120px;margin-left:10%;">
+<div class="form-check" >
+  <input [(ngModel)]="chacked" name="chacked" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    agree with <a target="blank" href="#">terms and condition</a>
+  </label>
+</div>
+
+</form>
+</div>

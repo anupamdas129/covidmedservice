@@ -1,0 +1,23 @@
+<body>
+    <div class="login-form">
+        <form [formGroup]="forgetForm" (ngSubmit)="onSubmit()" action="/examples/actions/confirmation.php" method="post">
+            <h2 class="text-center">User Forget Password</h2>       
+            <div class="form-group">
+                <input formControlName="email" type="text" class="form-control" placeholder="Email" required="required">
+                <small class = "text-danger" *ngIf="!this.forgetForm.get('email')?.valid && this.forgetForm.get('email')?.touched">
+                    <span *ngIf="this.forgetForm.get('email')?.errors?.required"> enter a valid email</span>
+                    <span *ngIf="this.forgetForm.get('email')?.errors?.emailIsNotAllowed">entered email is not registered</span>
+                  </small>
+            </div><br>
+            <div class="form-group">
+                <input formControlName="password" type="password" class="form-control" placeholder="Enter new Password" required="required">
+                <small class = "text-danger" *ngIf="!this.forgetForm.get('password')?.valid && this.forgetForm.get('password')?.touched">
+                    plsease enter password
+                </small>
+            </div><br>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Update Password</button>
+            </div>       
+        </form>
+    </div>
+    </body>

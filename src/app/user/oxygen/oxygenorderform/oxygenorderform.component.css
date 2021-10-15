@@ -1,0 +1,29 @@
+.form-control{
+    border-radius:10px;
+    
+}
+.form-label{
+    color:#1a75ff;
+    font-size: 20px;
+}
+h2{
+    color:#1a75ff;
+}
+.radio{
+    border-style: groove;
+    border-radius: 5px;
+    background:#f2f2f2;
+    width:150px;
+}
+.radio2{
+    margin-left: 40%;
+    margin-top: -34px;
+    height: 33.8px;
+}
+.checkbox-label{
+    margin-left: 10px;
+    color:#1aa3ff;
+}
+.checkbox-radio{
+
+}

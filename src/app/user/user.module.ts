@@ -9,6 +9,7 @@ import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginuserComponent } from './loginuser/loginuser.component';
 import { RegistrationuserComponent } from './registrationuser/registrationuser.component';
+import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RegistrationuserComponent } from './registrationuser/registrationuser.c
     AboutpageComponent,
     LoginuserComponent,
     RegistrationuserComponent,
+    ForgetpassComponent,
 
   ],
   imports: [

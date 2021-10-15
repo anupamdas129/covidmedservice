@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
+import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginuserComponent } from './loginuser/loginuser.component';
 import { RegistrationuserComponent } from './registrationuser/registrationuser.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path: '',component:HomepageComponent},
   {path: 'aboutpage',component:AboutpageComponent},
   {path: 'login',component:LoginuserComponent},
+  {path: 'forgetpass',component:ForgetpassComponent},
   {path: 'register',component:RegistrationuserComponent},
   {path: 'doctorportal',canActivate:[AuthGuard], loadChildren:()=>
   import('./doctorprotal/doctorprotal.module').then((m: { DoctorprotalModule: any; }) => m.DoctorprotalModule)},

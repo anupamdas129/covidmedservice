@@ -1,0 +1,76 @@
+
+<app-doctor-header></app-doctor-header>
+<div class="wrapper">
+<div class="container">
+  <h2>Doctor consult form</h2>
+  <form [formGroup]="patentForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Enter andharNo:</label>
+      <input formControlName="andharNo"  type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <small class = "text-danger" *ngIf="!this.patentForm.get('andharNo')?.valid && this.patentForm.get('andharNo')?.touched">
+      * plsease enter your andharNo
+    </small>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Enter your age:</label>
+      <input formControlName="age" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <small class = "text-danger" *ngIf="!this.patentForm.get('age')?.valid && this.patentForm.get('age')?.touched">
+      * plsease enter your age
+    </small>
+    <br>
+    <label for="exampleFormControlTextarea1" class="form-label">Covid Positive:</label>
+  <div class="form-check radio radio1">
+    <input formControlName="covidAuth" id="Yes" value="Yes" name="covidAuth" class="form-check-input checkbox-radio" type="radio">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault1">
+     <b> Yes</b>
+    </label>
+  </div>
+  <div class="form-check radio radio2">
+    <input formControlName="covidAuth" id="No" value="No" name="covidAuth" class="form-check-input checkbox-radio" type="radio" style="margin-top: 1px;">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault2">
+     <b> No </b>
+    </label>
+  </div>
+  <label for="exampleFormControlTextarea1" class="form-label">Are You In Fever:</label>
+  <div class="form-check radio radio1">
+    <input formControlName="fever" id="Yes" value="Yes" name="fever" class="form-check-input checkbox-radio" type="radio">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault1"> 
+     <b> Yes</b>
+    </label>
+  </div>
+  <div class="form-check radio radio2">
+    <input formControlName="fever" id="No" value="No" name="fever" class="form-check-input checkbox-radio" type="radio" style="margin-top:2px">
+    <label class="form-check-label checkbox-label" for="flexRadioDefault2">
+     <b> No </b>
+    </label>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Enter Your Teamperature:</label>
+    <input formControlName="temperature" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>Enter Your problems In Details:</b></label>
+    <textarea formControlName="symptomdetails"  class="form-control" id="exampleFormControlTextarea1" rows="6" columns="8"></textarea>
+  </div>
+  <small class = "text-danger" *ngIf="!this.patentForm.get('symptomdetails')?.valid && this.patentForm.get('symptomdetails')?.touched">
+    * plsease enter symptomdetails
+  </small>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>Enter Your address:</b></label>
+    <textarea formControlName="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <small class = "text-danger" *ngIf="!this.patentForm.get('address')?.valid && this.patentForm.get('address')?.touched">
+    * plsease enter address
+  </small>
+  <br><br>
+  <div class="mb-3">
+    <div class="mb-3" >
+      <button type="submit" class="btn btn-primary" style="width:20%;padding: 15px;">Submit</button>
+    </div>
+  </div>
+  <br><br>
+  </form>
+</div>
+</div>
+

@@ -1,0 +1,26 @@
+<button style="margin-left:50px;margin-top: 20px;" class="btn btn-info" (click)="download()" >download</button><br>
+<div id="content" #content>
+<div  style="border: 1px solid black;border-radius: 10px; padding:20px;width:500px;margin-left: 50px;margin-top: 20px;margin-bottom:30px">
+<h3 style="text-align:center; margin-top: 0px;">Covid Home Service</h3>
+<h5 style="text-align:center">ph no:- {{getuserpres.phno}} Email: covidhomeservce@gamil.com</h5>
+<h5  style="text-align:center"> Online Doctor Consult </h5>
+<h6>Dr name: {{getuserpres.dname}} </h6>
+<h6>MBBS,From Calcutta</h6>
+<hr size="10">
+<br>
+<p><b>Name :</b> {{getuserpres.name}} <b>Age :</b> {{getuserpres.age}}</p>
+<h5 style="margin-bottom: 20px"><b>Problems:</b></h5>
+<div style="border:1px solid black;padding:30px">
+<p><b>Covid Positive:</b> {{getuserpres.covidAuth}}</p>
+<p><b>Has Fever: </b>{{getuserpres.fever}}</p>
+<P><b>Symtoms In Detsils:</b></P>
+<P style="margin-left: 30px;margin-top: -10px;">{{getuserpres.symptomdetails}}</P>
+</div>
+<h5 style="margin-bottom: 20px;margin-top:15px"><b>Solution and Medicine:</b></h5>
+<div style="border:1px solid black;padding:30px">
+<p>{{getuserpres.medicine}}</p>
+</div>
+<p style="margin-top: 20px;margin-bottom:5px"><b>Date: </b> {{getuserpres.date.toString().slice(0,10)}}</p>
+</div>
+</div>
+

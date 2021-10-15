@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="inner">
+    <p style="font-size:25px;font-weight:bold;margin-top:-100px">Download prescription from here</p>
+    <div class="card" style="margin-bottom:10px;width:700px" *ngFor="let item of this.getrevprascription">
+        <div class="card-header">
+            <h4>{{item.name}}'s prescription</h4>
+        </div>
+        <div class="card-body" >
+          <p>Here is your prescription for your prolem post on date {{item.problemdate.toString().slice(0,10)}}  plese download from bellow link here</p>
+          <a target="_blank" [routerLink]="['/user/doctorportal/presdownload',item._id]"> click here</a>
+        </div>
+      </div>
+      
+</div>
+</div>

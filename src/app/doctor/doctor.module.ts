@@ -6,13 +6,19 @@ import { LogindoctorComponent } from './logindoctor/logindoctor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderdoctorComponent } from './headerdoctor/headerdoctor.component';
 import { HomedoctorComponent } from './homedoctor/homedoctor.component';
+import { PatentmanagementComponent } from './patentmanagement/patentmanagement.component';
+import { PatentdetailsComponent } from './patentdetails/patentdetails.component';
+
 
 
 @NgModule({
   declarations: [
     LogindoctorComponent,
     HeaderdoctorComponent,
-    HomedoctorComponent
+    HomedoctorComponent,
+    PatentmanagementComponent,
+    PatentdetailsComponent,
+
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,15 @@
+.container{
+    border:5px solid black;
+    margin: 50px;
+    width:100%
+}
+.inner{
+    margin:35px;
+}
+.body{
+    font-size:22px
+}
+.form-control{
+    width:400px;
+    
+}

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../userDbservice/user.service';
 import { User } from '../../models/user.model';
+import { ThisReceiver } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,6 @@ export class AuthService {
   setToken(token: string): void {
     localStorage.setItem('token', token);
   }
-
   getToken(): string | null {
     return localStorage.getItem('token');
   }
@@ -28,6 +28,7 @@ export class AuthService {
     this.router.navigate(['/user']);
   }
   email: string[] = [];
+  myemail!:string
   getUser(){
     this.userService.getUserlist().subscribe((res:any) => {
       this.Users = res;
@@ -38,7 +39,8 @@ export class AuthService {
     for(var list of this.Users){
     if ( email == list.email&& password == list.password) {
       this.setToken(list._id);
-      return of({ uname: list.name, emai:list.email});
+      return of({ uname: list.name, email:list.email});
+
     }}
     return throwError(new Error('Failed to login'))  
   }
